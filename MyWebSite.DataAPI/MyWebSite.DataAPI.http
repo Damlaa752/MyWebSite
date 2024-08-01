@@ -1,0 +1,6 @@
+@MyWebSite.DataAPI_HostAddress = http://localhost:5256
+
+GET {{MyWebSite.DataAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

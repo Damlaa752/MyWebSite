@@ -1,0 +1,6 @@
+@MyWebSite.AuthAPI_HostAddress = http://localhost:5214
+
+GET {{MyWebSite.AuthAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
