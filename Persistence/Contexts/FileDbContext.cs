@@ -24,6 +24,8 @@ namespace Persistence.Contexts
             modelBuilder.Entity<FileEntity>(entity =>
             {
                 entity.HasKey(f => f.ID);
+                entity.Property(f => f.ID)
+                    .ValueGeneratedOnAdd();  // Otomatik artan olarak ayarlama
                 entity.Property(f => f.FileName)
                     .IsRequired()
                     .HasMaxLength(255);

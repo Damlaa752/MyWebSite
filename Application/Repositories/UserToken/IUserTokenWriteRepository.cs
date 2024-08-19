@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories.UserToken
 {
-    public interface IUserTokenWriteRepository : IRepository<Domain.IdentityEntities.UserToken>
+    public interface IUserTokenWriteRepository : IAuthWriteRepository<Domain.IdentityEntities.UserToken>
     {
     }
 }

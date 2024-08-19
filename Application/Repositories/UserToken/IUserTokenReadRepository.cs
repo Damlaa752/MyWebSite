@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories.UserToken
 {
-    public interface IUserTokenReadRepository : IRepository<Domain.IdentityEntities.UserToken>
+    public interface IUserTokenReadRepository : IAuthReadRepository<Domain.IdentityEntities.UserToken>
     {
+        Task<IEnumerable<Domain.IdentityEntities.UserToken>> GetByIdAsync(string userId);
     }
 }

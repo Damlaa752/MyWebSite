@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories.FileEntity
 {
-    public interface IFileEntityWriteRepository : IRepository<Domain.FileEntities.FileEntity>
+    public interface IFileEntityWriteRepository : IFileEntityWriteRepository<Domain.FileEntities.FileEntity>
     {
     }
 }

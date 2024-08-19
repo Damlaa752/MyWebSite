@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories.UserRole
 {
-    public interface IUserRoleWriteRepository : IRepository<Domain.IdentityEntities.UserRole>
+    public interface IUserRoleWriteRepository : IAuthWriteRepository<Domain.IdentityEntities.UserRole>
     {
     }
 }

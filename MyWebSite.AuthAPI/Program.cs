@@ -1,3 +1,5 @@
+using Application.Services.Classes;
+using Application.Services.Interface;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,11 @@ builder.Services.AddSwaggerGen();
 
 // Add Persistence Services
 serviceRegistration.AddPersistenceServices(builder.Services, builder.Configuration);
+
+// Add Application Services
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRoleService, UserRoleService>();
+builder.Services.AddScoped<IUserTokenService, UserTokenService>();
 
 var app = builder.Build();
 
@@ -28,4 +35,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-

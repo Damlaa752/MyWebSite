@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.Repositories.UserRole
 {
-    public interface IUserRoleReadRepository : IRepository<Domain.IdentityEntities.UserRole>
+    public interface IUserRoleReadRepository : IAuthReadRepository<Domain.IdentityEntities.UserRole>
     {
+        Task<IEnumerable<Domain.IdentityEntities.UserRole>> GetByIdAsync(string userId);
     }
 }
